@@ -1,0 +1,124 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    padding: 1rem 1rem 3rem;
+    background-color: var(--white-color);
+    box-shadow: 1px 0 12 rgba(22, 8, 43, .1);
+    z-index: var(--z-fixed);
+    transition: left .4s;
+}
+
+.sidebar__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: auto;
+    scrollbar-width: none; /* for mozila */
+}
+
+.sidebar__container::-webkit-scrollbar {
+    display: none; /* for google Chrome */
+}
+
+.sidebar__logo {
+    font-weight: var(--font-medium);
+    margin-bottom: 2.5rem;
+}
+
+.sidebar__list,
+.sidebar__items {
+    display: grid;
+}
+
+.sidebar__list {
+    row-gap: 2.5rem;
+}
+
+.sidebar__items {
+    row-gap: 1.5rem;
+}
+
+.sidebar__subtitle {
+    font-size: var(--normal-font-size);
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: var(--text-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.sidebar__link {
+    display: flex;
+    column-gap: .25rem;
+    align-items: center;
+    color: var(--text-color);
+    transition: color .3s;
+}
+
+.sidebar__link:hover {
+    color: var(--first-color);
+}
+
+.sidebar__link i {
+    font-size: 1.25rem;
+}
+
+.sidebar__name {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    white-space: nowrap;
+}
+
+.sidebar__logout {
+    margin-top: 5rem;
+}
+
+/* Dropdown */
+.sidebar__dropdown {
+    overflow: hidden;
+    max-height: 21px;
+    transition: .4s ease-in-out;
+}
+
+.sidebar__dropdown-collapse {
+    background-color: var(--first-color-lighten);
+    border-radius: .25rem;
+    margin-top: 1rem;
+}
+
+.sidebar__dropdown-content {
+    display: grid;
+    row-gap: .5rem;
+    padding: .75rem 2.5rem .75rem 1.8rem;
+}
+
+.sidebar__dropdown-item {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    color: var(--text-color);
+}
+
+.sidebar__dropdown-item:hover {
+    color: var(--first-color);
+}
+
+.sidebar__dropdown-icon {
+    transition: .3s;
+    margin-left: auto;
+}
+
+/* show collapse */
+.sidebar__dropdown:hover {
+    max-height: 100rem;
+}
+
+.sidebar__dropdown:hover .sidebar__dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/*===== SHOW MENU =====*/
+.show-sidebar {
+    left: 0;
+}

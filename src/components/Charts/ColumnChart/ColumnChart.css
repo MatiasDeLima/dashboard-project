@@ -1,0 +1,29 @@
+
+.chart__content {
+    background-color: var(--white-color);
+    padding: 2rem 0;
+    border-radius: 1rem;
+    transition: .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart__content:hover {
+    cursor: pointer;
+    box-shadow: 0 0 20px #dddddd44;
+}
+
+#apexchartsbasic-bar {
+    width: 500px; /* Defina a largura desejada, por exemplo, 400 pixels */
+    height: 300px; /* Defina a altura desejada, por exemplo, 300 pixels */
+}
+
+.bar-chart {
+    background-color: black;
+}
+
+/* .apexcharts-bar-area[val] {
+    content: attr(val);
+    color: transparent;
+} */
