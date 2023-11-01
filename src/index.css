@@ -111,6 +111,18 @@ button {
   overflow: hidden; /*For animation*/
 }
 
+.center {
+  justify-self: center;
+}
+
+foreignObject .apexcharts-legend-series{
+  display: none;
+} 
+
+foreignObject{
+  display: none;
+} 
+
 /*===== MEDIA QUERIES =====*/
 @media screen and (min-width: 768px) {
   .container {
