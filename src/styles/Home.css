@@ -3,7 +3,11 @@
     justify-content: center;
 }
 
-@media screen and (min-width: 768px) {
+.chart__title {
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 990px) {
     .home__container {
         grid-template-columns: repeat(2, 340px);
     }
@@ -11,6 +15,6 @@
 
 @media screen and (min-width: 1024px) {
     .home__container {
-        grid-template-columns: repeat(2, 400px);
+        grid-template-columns: repeat(3, 300px);
     }
 }

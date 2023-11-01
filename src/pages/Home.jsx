@@ -1,5 +1,4 @@
 import ColumnChart from "../components/Charts/ColumnChart/ColumnChart";
-import ColumnBasicChart from "../components/Charts/ColumnBasicChart/ColumnBasicChart";
 import LineChart from "../components/Charts/LineChart/LineChart";
 import DobleBarChart from "../components/Charts/DobleBarChart/DobleBarChart";
 
@@ -11,7 +10,6 @@ const Home = () => {
       <div className="home__container container grid">
         <DobleBarChart />
         <ColumnChart />
-        <ColumnBasicChart />
         <LineChart />
       </div>
     </section>
