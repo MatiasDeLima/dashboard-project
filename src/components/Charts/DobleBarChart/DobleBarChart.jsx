@@ -112,7 +112,7 @@ class DobleBarChart extends Component {
   render() {
     return (
       <div className="chart__card">
-        <h3 className="chart__title">Inflação</h3>
+        <h3 className="chart__title">Endividamento</h3>
         <div className="chart">
           <Chart
             options={this.state.options}

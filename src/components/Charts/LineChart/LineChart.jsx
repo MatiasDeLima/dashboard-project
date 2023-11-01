@@ -34,7 +34,6 @@ class LineChart extends Component {
         enabled: false,
       },
       stroke: {
-        curve: "smooth",
         width: 6,
       },
       grid: {
@@ -50,16 +49,19 @@ class LineChart extends Component {
         {
           name: "Clicks",
           data: [6500, 6418, 6456, 6526, 6356, 6456],
-          color: "#1A56DB",
+          color: "#2381FF",
         },
         {
           name: "CPC",
           data: [6456, 6356, 6526, 6332, 6418, 6500],
-          color: "#7E3AF2",
+          color: "#01AB6C",
         },
       ],
       legend: {
         show: false,
+      },
+      stroke: {
+        curve: 'smooth',
       },
       xaxis: {
         categories: [
@@ -93,14 +95,27 @@ class LineChart extends Component {
 
   render() {
     return (
-      <div className="chart__content">
+      <div className="chart__card">
+        <h3 className="chart__title">Índices econômicos</h3>
         <Chart
           options={this.state.options}
           series={this.state.series}
           type="line"
-          width="300"
-          height="300"
+          width={268}
+          height={200}
         />
+
+        <div className="chart__infos">
+          <div className="chart__info-data">
+            <div className="chart__info-color-4"></div>
+            <span className="chart__info-name">Info name</span>
+          </div>
+
+          <div className="chart__info-data">
+            <div className="chart__info-color-5"></div>
+            <span className="chart__info-name">Info name</span>
+          </div>
+        </div>
       </div>
     );
   }
