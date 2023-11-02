@@ -30,20 +30,26 @@ class LineChart extends Component {
           show: false,
         },
       },
+      fill: {
+        type: "gradient",
+        gradient: {
+          opacityFrom: 0.55,
+          opacityTo: 0,
+          shade: "#1C64F2",
+          gradientToColors: ["#1C64F2"],
+        },
+      },
       dataLabels: {
         enabled: false,
       },
       stroke: {
         width: 6,
+        curve: "smooth",
+        lineCap: "butt",
       },
       grid: {
         show: true,
         strokeDashArray: 4,
-        padding: {
-          left: 2,
-          right: 2,
-          top: -26,
-        },
       },
       series: [
         {
@@ -61,7 +67,7 @@ class LineChart extends Component {
         show: false,
       },
       stroke: {
-        curve: 'smooth',
+        curve: "smooth",
       },
       xaxis: {
         categories: [
@@ -97,13 +103,15 @@ class LineChart extends Component {
     return (
       <div className="chart__card">
         <h3 className="chart__title">Índices econômicos</h3>
-        <Chart
-          options={this.state.options}
-          series={this.state.series}
-          type="line"
-          width={268}
-          height={200}
-        />
+        <div className="center">
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="line"
+            width={250}
+            height={200}
+          />
+        </div>
 
         <div className="chart__infos">
           <div className="chart__info-data">

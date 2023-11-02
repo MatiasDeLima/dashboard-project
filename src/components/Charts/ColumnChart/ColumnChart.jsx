@@ -93,13 +93,15 @@ class ColumnChart extends Component {
     return (
       <div className="chart__card">
         <h3 className="chart__title">Inflação</h3>
-        <Chart
-          options={this.state.options}
-          series={this.state.series}
-          type="bar"
-          width={268}
-          height={200}
-        />
+        <div className="center">
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type="bar"
+            width={268}
+            height={200}
+          />
+        </div>
 
         <div className="chart__infos">
           <div className="chart__info-data">

@@ -1,9 +1,7 @@
 import { Component } from "react";
 import Chart from "react-apexcharts";
 
-import "./DoubleBarChart.css";
-
-class DobleBarChart extends Component {
+class DoubleBarChartB extends Component {
   constructor(props) {
     super(props);
 
@@ -11,7 +9,7 @@ class DobleBarChart extends Component {
       series: [
         {
           name: "Net Profit",
-          color: "#69927A",
+          color: "#FF5555",
           data: [
             { x: "Mon", y: 231 },
             { x: "Tue", y: 122 },
@@ -23,7 +21,7 @@ class DobleBarChart extends Component {
         },
         {
           name: "Free Cash Flow",
-          color: "#E4EDDC",
+          color: "#FFDDDD",
           data: [
             { x: "Mon", y: 232 },
             { x: "Tue", y: 113 },
@@ -47,10 +45,10 @@ class DobleBarChart extends Component {
         plotOptions: {
           bar: {
             horizontal: false,
-            columnWidth: "100%",
-            // endingShape: "rounded",
-            // borderRadiusApplication: "end",
-            // borderRadius: 16,
+            columnWidth: "70%",
+            endingShape: "rounded",
+            borderRadiusApplication: "around",
+            borderRadius: 12,
           },
         },
         dataLabels: {
@@ -139,4 +137,4 @@ class DobleBarChart extends Component {
   }
 }
 
-export default DobleBarChart;
+export default DoubleBarChartB;

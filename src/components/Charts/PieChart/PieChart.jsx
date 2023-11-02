@@ -19,17 +19,6 @@ class PieChart extends Component {
         labels: ["Team A", "Team B", "Team C", "Team D", "Team E"],
         responsive: [
           {
-            breakpoint: 480,
-            options: {
-              chart: {
-                width: 250,
-              },
-              legend: {
-                position: "bottom",
-              },
-            },
-          },
-          {
             breakpoint: 1024,
             options: {
               chart: {
@@ -43,8 +32,9 @@ class PieChart extends Component {
         ],
       },
       stroke: {
-        color: ["#1C64F2"],
-        lineCap: "",
+        show: true,
+        width: 5,
+        colors: ["transparent"],
       },
       plotOptions: {
         pie: {
@@ -100,7 +90,7 @@ class PieChart extends Component {
             options={this.state.options}
             series={this.state.series}
             type="pie"
-            width={300}
+            width={250}
           />
         </div>
 
