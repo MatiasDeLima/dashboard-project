@@ -1,4 +1,4 @@
-.home__container {
+.dashboard__container {
     gap: 2rem;
     justify-content: center;
 }
@@ -8,14 +8,14 @@
 }
 
 @media screen and (min-width: 970px) {
-    .home__container {
+    .dashboard__container {
         grid-template-columns: repeat(2, 340px);
         justify-content: center;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .home__container {
+    .dashboard__container {
         grid-template-columns: repeat(3, 300px);
     }
 }
