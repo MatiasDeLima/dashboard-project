@@ -2,8 +2,7 @@ import React from "react";
 
 import { Component } from "react";
 import Chart from "react-apexcharts";
-
-import "./LineChart.css";
+import ChartInfos from "./ChartUtils/ChartInfos";
 
 class LineChart extends Component {
   constructor(props) {
@@ -100,6 +99,10 @@ class LineChart extends Component {
   }
 
   render() {
+    const infoData = [
+      { name: "Várzea Grande", fillColor: "#FF702A" },
+      { name: "Sinop", fillColor: "#AEDC71" },
+    ];
     return (
       <div className="chart__card">
         <h3 className="chart__title">Índices econômicos</h3>
@@ -113,17 +116,7 @@ class LineChart extends Component {
           />
         </div>
 
-        <div className="chart__infos">
-          <div className="chart__info-data">
-            <div className="chart__info-color-4"></div>
-            <span className="chart__info-name">Info name</span>
-          </div>
-
-          <div className="chart__info-data">
-            <div className="chart__info-color-5"></div>
-            <span className="chart__info-name">Info name</span>
-          </div>
-        </div>
+        <ChartInfos infosArray={infoData} />
       </div>
     );
   }

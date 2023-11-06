@@ -1,7 +1,8 @@
 import { Component } from "react";
 import Chart from "react-apexcharts";
+import ChartInfos from "./ChartUtils/ChartInfos";
 
-class DoubleBarChartB extends Component {
+class DobleBarChart extends Component {
   constructor(props) {
     super(props);
 
@@ -9,7 +10,7 @@ class DoubleBarChartB extends Component {
       series: [
         {
           name: "Net Profit",
-          color: "#FF5555",
+          color: "#69927A",
           data: [
             { x: "Mon", y: 231 },
             { x: "Tue", y: 122 },
@@ -21,7 +22,7 @@ class DoubleBarChartB extends Component {
         },
         {
           name: "Free Cash Flow",
-          color: "#FFDDDD",
+          color: "#E4EDDC",
           data: [
             { x: "Mon", y: 232 },
             { x: "Tue", y: 113 },
@@ -45,10 +46,10 @@ class DoubleBarChartB extends Component {
         plotOptions: {
           bar: {
             horizontal: false,
-            columnWidth: "70%",
-            endingShape: "rounded",
-            borderRadiusApplication: "around",
-            borderRadius: 12,
+            columnWidth: "100%",
+            // endingShape: "rounded",
+            // borderRadiusApplication: "end",
+            // borderRadius: 16,
           },
         },
         dataLabels: {
@@ -108,6 +109,10 @@ class DoubleBarChartB extends Component {
   }
 
   render() {
+    const infoData = [
+      { name: "Várzea Grande", fillColor: "#FF702A" },
+      { name: "Sinop", fillColor: "#AEDC71" },
+    ];
     return (
       <div className="chart__card">
         <h3 className="chart__title">Endividamento</h3>
@@ -121,20 +126,10 @@ class DoubleBarChartB extends Component {
           />
         </div>
 
-        <div className="chart__infos">
-          <div className="chart__info-data">
-            <div className="chart__info-color-1"></div>
-            <span className="chart__info-name">Info name</span>
-          </div>
-
-          <div className="chart__info-data">
-            <div className="chart__info-color-2"></div>
-            <span className="chart__info-name">Info name</span>
-          </div>
-        </div>
+        <ChartInfos infosArray={infoData} />
       </div>
     );
   }
 }
 
-export default DoubleBarChartB;
+export default DobleBarChart;

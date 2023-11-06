@@ -1,0 +1,28 @@
+.progress__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-background {
+    fill: none;
+    stroke: #FBFBFB;
+}
+
+.circle-progress {
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.circle__text {
+    font-weight: var(--font-semi-bold);
+}
+
+.chart__content-double {
+    display: flex;
+    column-gap: 1rem;
+    justify-self: center;
+    margin-block: 1.5rem;
+}
+

@@ -1,39 +1,12 @@
 import { Component } from "react";
 import Chart from "react-apexcharts";
+import ChartInfos from "./ChartUtils/ChartInfos";
 
-import "./DoubleBarChart.css";
-
-class DobleBarChart extends Component {
+class ColumnChart extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      series: [
-        {
-          name: "Net Profit",
-          color: "#69927A",
-          data: [
-            { x: "Mon", y: 231 },
-            { x: "Tue", y: 122 },
-            { x: "Wed", y: 63 },
-            { x: "Thu", y: 421 },
-            { x: "Fri", y: 122 },
-            { x: "Sat", y: 323 },
-          ],
-        },
-        {
-          name: "Free Cash Flow",
-          color: "#E4EDDC",
-          data: [
-            { x: "Mon", y: 232 },
-            { x: "Tue", y: 113 },
-            { x: "Wed", y: 341 },
-            { x: "Thu", y: 224 },
-            { x: "Fri", y: 522 },
-            { x: "Sat", y: 411 },
-          ],
-        },
-      ],
       options: {
         chart: {
           type: "bar",
@@ -47,7 +20,7 @@ class DobleBarChart extends Component {
         plotOptions: {
           bar: {
             horizontal: false,
-            columnWidth: "100%",
+            columnWidth: "60%",
             // endingShape: "rounded",
             // borderRadiusApplication: "end",
             // borderRadius: 16,
@@ -106,13 +79,23 @@ class DobleBarChart extends Component {
           },
         },
       },
+      series: [
+        {
+          color: "#32B8CB",
+          name: "series-1",
+          data: [30, 40, 45, 50, 49, 60],
+        },
+      ],
     };
   }
-
   render() {
+    const infoData = [
+      { name: "Várzea Grande", fillColor: "#FF702A" },
+      { name: "Sinop", fillColor: "#AEDC71" },
+    ];
     return (
       <div className="chart__card">
-        <h3 className="chart__title">Endividamento</h3>
+        <h3 className="chart__title">Inflação</h3>
         <div className="center">
           <Chart
             options={this.state.options}
@@ -123,20 +106,10 @@ class DobleBarChart extends Component {
           />
         </div>
 
-        <div className="chart__infos">
-          <div className="chart__info-data">
-            <div className="chart__info-color-1"></div>
-            <span className="chart__info-name">Info name</span>
-          </div>
-
-          <div className="chart__info-data">
-            <div className="chart__info-color-2"></div>
-            <span className="chart__info-name">Info name</span>
-          </div>
-        </div>
+        <ChartInfos infosArray={infoData} />
       </div>
     );
   }
 }
 
-export default DobleBarChart;
+export default ColumnChart;

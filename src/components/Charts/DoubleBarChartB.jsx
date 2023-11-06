@@ -1,13 +1,38 @@
 import { Component } from "react";
 import Chart from "react-apexcharts";
+import ChartInfos from "./ChartUtils/ChartInfos";
 
-import "./ColumnChart.css";
-
-class ColumnChart extends Component {
+class DoubleBarChartB extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      series: [
+        {
+          name: "Net Profit",
+          color: "#FF5555",
+          data: [
+            { x: "Mon", y: 231 },
+            { x: "Tue", y: 122 },
+            { x: "Wed", y: 63 },
+            { x: "Thu", y: 421 },
+            { x: "Fri", y: 122 },
+            { x: "Sat", y: 323 },
+          ],
+        },
+        {
+          name: "Free Cash Flow",
+          color: "#FFDDDD",
+          data: [
+            { x: "Mon", y: 232 },
+            { x: "Tue", y: 113 },
+            { x: "Wed", y: 341 },
+            { x: "Thu", y: 224 },
+            { x: "Fri", y: 522 },
+            { x: "Sat", y: 411 },
+          ],
+        },
+      ],
       options: {
         chart: {
           type: "bar",
@@ -21,10 +46,10 @@ class ColumnChart extends Component {
         plotOptions: {
           bar: {
             horizontal: false,
-            columnWidth: "60%",
-            // endingShape: "rounded",
-            // borderRadiusApplication: "end",
-            // borderRadius: 16,
+            columnWidth: "70%",
+            endingShape: "rounded",
+            borderRadiusApplication: "around",
+            borderRadius: 12,
           },
         },
         dataLabels: {
@@ -80,19 +105,17 @@ class ColumnChart extends Component {
           },
         },
       },
-      series: [
-        {
-          color: "#32B8CB",
-          name: "series-1",
-          data: [30, 40, 45, 50, 49, 60],
-        },
-      ],
     };
   }
+
   render() {
+    const infoData = [
+      { name: "Várzea Grande", fillColor: "#FF702A" },
+      { name: "Sinop", fillColor: "#AEDC71" },
+    ];
     return (
       <div className="chart__card">
-        <h3 className="chart__title">Inflação</h3>
+        <h3 className="chart__title">Endividamento</h3>
         <div className="center">
           <Chart
             options={this.state.options}
@@ -103,15 +126,10 @@ class ColumnChart extends Component {
           />
         </div>
 
-        <div className="chart__infos">
-          <div className="chart__info-data">
-            <div className="chart__info-color-3"></div>
-            <span className="chart__info-name">Info name</span>
-          </div>
-        </div>
+        <ChartInfos infosArray={infoData} />
       </div>
     );
   }
 }
 
-export default ColumnChart;
+export default DoubleBarChartB;
