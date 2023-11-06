@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 
 import "../styles/State.css";
 
-const City = () => {
+const Consorcio = () => {
   const [Toggle, showDropdown] = useState(false);
 
   return (
     <section className="state section">
       <div className="state__container container grid">
         <div className="state__map">
-          <img src="src/assets/cidade-map.svg" />
+          <img src="src/assets/consorcio-map.png" />
         </div>
 
         <div className="state__form">
@@ -18,7 +18,7 @@ const City = () => {
             <i class="ri-map-pin-2-fill"></i>
           </div>
 
-          <h3 className="state__title">Escolha sua cidade</h3>
+          <h3 className="state__title">Escolha seu estado</h3>
 
           <div
             className={
@@ -30,7 +30,7 @@ const City = () => {
               onClick={() => showDropdown(!Toggle)}
             >
               <i class="ri-global-line dropdown__icon"></i>
-              <span className="dropdown__name">Escolha a cidade</span>
+              <span className="dropdown__name">Escolha o estado</span>
 
               <div className="dropdown__icons">
                 <i class="ri-arrow-down-s-line dropdown__arrow"></i>
@@ -40,19 +40,19 @@ const City = () => {
 
             <ul className="dropdown__menu">
               <li className="dropdown__item">
-                <span>João Pessoa</span>
+                <span>Paraiba</span>
               </li>
 
               <li className="dropdown__item">
-                <span>Natal</span>
+                <span>Rio Grande do sul</span>
               </li>
 
               <li className="dropdown__item">
-                <span>Recife</span>
+                <span>Fortaleza</span>
               </li>
 
               <li className="dropdown__item">
-                <span>Rio de Janeiro</span>
+                <span>Manaus</span>
               </li>
             </ul>
           </div>
@@ -66,4 +66,4 @@ const City = () => {
   );
 };
 
-export default City;
+export default Consorcio;
