@@ -1,14 +1,20 @@
 import Routers from "../../router/Routers";
 import Header from "../Header/Header";
-import SideBar from "../SideBar/SideBar";
+
+import { useState } from "react";
 
 const Layout = () => {
+  const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
+
+  const OpenSidebar = () => {
+    setOpenSidebarToggle(!openSidebarToggle);
+  }
+
   return (
     <>
-      <Header />
-      <SideBar />
+      <Header OpenSidebar={OpenSidebar}/>
       <main className="main">
-        <Routers />
+        <Routers openSidebarToggle={openSidebarToggle} />
       </main>
     </>
   );
