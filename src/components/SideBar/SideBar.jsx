@@ -1,14 +1,15 @@
 import "./SideBar.css";
+import React from "react";
 
-const SideBar = () => {
+const SideBar = ({openSidebarToggle}) => {
 
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${openSidebarToggle ? "show-sidebar" : ""}`}>
       <nav className="sidebar__container">
         <div>
-          <a href="#" className="sidebar__link sidebar__logo">
-            <i className="ri-pen-nib-line"></i>
-            <span>Matias</span>
+          <a href="#" className="sidebar__logo">
+            <img src="/src/assets/logo-icon.svg"/>
+            <span>MM-UI</span>
           </a>
 
           <div className="sidebar__list">
