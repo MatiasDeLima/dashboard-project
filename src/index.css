@@ -7,13 +7,16 @@
   --nav-width: 10.875rem;
 
   /*========== Colors ==========*/
-  --first-color: hsl(220, 68%, 54%);
+  --first-color: hsl(158, 98%, 33%);
+  --secund-color: hsl(220, 68%, 54%); 
+  --red-color: #FF5555; 
   --first-color-lighten: hsl(220, 68%, 97%);
   --title-color: hsl(220, 48%, 28%);
   --text-color: hsl(220, 12%, 45%);
   --body-color: hsl(220, 100%, 99%);
   --white-color: hsl(0, 0%, 100%);
   --container-color: hsl(0, 0%, 98%);
+  --linear-color-1: linear-gradient(135deg, #FEB032, #FF702A);
 
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
@@ -39,7 +42,7 @@
 /* Responsive typography */
 @media screen and (min-width: 1024px) {
   :root {
-    --biggest-font-size: 4rem;
+    --biggest-font-size: 3rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
@@ -96,6 +99,7 @@ button {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
+  max-width: 1120px;
   margin-inline: 1.5rem;
 }
 
@@ -115,42 +119,19 @@ button {
   justify-self: center;
 }
 
-foreignObject .apexcharts-legend-series{
+foreignObject .apexcharts-legend-series {
   display: none;
-} 
+}
 
-foreignObject{
+foreignObject {
   display: none;
-} 
+}
+
+ /*========== GLOBAL CHART OPTIONS ==========*/
+ 
 
 /*===== MEDIA QUERIES =====*/
 @media screen and (min-width: 768px) {
-  .container {
-    margin-inline: 0;
-  }
-
-  body {
-    padding-left: calc(var(--nav-width) + 1.5rem);
-  }
-
-  .header {
-    padding-left: calc(var(--nav-width) + 1.5rem);
-    /* padding: 0 3rem 0 6rem; */
-  }
-
-  .header__container {
-    height: calc(var(--header-height) + 0.5rem);
-  }
-
-  .header__search {
-    width: 300px;
-    padding: 0.55rem 0.75rem;
-  }
-
-  .header__toggle {
-    display: none;
-  }
-
   .sidebar {
     left: 0;
     padding: 1.2ren 1.5rem 3rem;
@@ -162,23 +143,15 @@ foreignObject{
 }
 
 @media screen and (min-width: 1024px) {
-  body {
-    padding-left: calc(var(--nav-width) + 2rem);
-  }
-
-  .header {
-    padding-left: calc(var(--nav-width) + 2rem);
-    /* padding: 0 3rem 0 6rem; */
-  }
+ 
 }
 
 @media screen and (min-width: 1120px) {
-  body {
-    padding-left: calc(var(--nav-width) + 2.5rem);
-  }
+ 
+}
 
-  .header {
-    padding-left: calc(var(--nav-width) + 2.5rem);
-    /* padding: 0 3rem 0 6rem; */
+@media screen and (min-width: 1152px) {
+  .container {
+    margin-inline: auto;
   }
 }
