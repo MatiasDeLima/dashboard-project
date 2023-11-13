@@ -1,0 +1,50 @@
+/* monitoramento cards */
+.monitoramento__card {
+  position: relative;
+  padding: 2rem 1.25rem;
+  text-align: center;
+  width: 290px;
+  margin: 0 auto;
+  background-color: var(--body-color);
+  box-shadow: 0px 4px 30px 0px rgba(39, 69, 190, 0.06);
+  border-radius: 1rem;
+}
+
+.monitoramento__number {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  background-color: var(--secund-color);
+  color: var(--white-color);
+  font-size: var(--h3-font-size);
+  font-weight: 600;
+  border-radius: 50%;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.monitoramento__icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--first-color);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: var(--white-color);
+  font-size: 1.5rem;
+  margin: 0 auto 1.5rem;
+}
+
+.monitoramento__name {
+  color: var(--title-color);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 0.8rem;
+}
+
+.gerenciamento__description {
+  line-height: 24px;
+  margin-bottom: 1rem;
+}

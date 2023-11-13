@@ -1,6 +1,5 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
@@ -8,18 +7,23 @@
 
   /*========== Colors ==========*/
   --first-color: hsl(158, 98%, 33%);
-  --secund-color: hsl(220, 68%, 54%); 
-  --red-color: #FF5555; 
+  --secund-color: hsl(220, 68%, 54%);
   --first-color-lighten: hsl(220, 68%, 97%);
   --title-color: hsl(220, 48%, 28%);
   --text-color: hsl(220, 12%, 45%);
   --body-color: hsl(220, 100%, 99%);
   --white-color: hsl(0, 0%, 100%);
   --container-color: hsl(0, 0%, 98%);
-  --linear-color-1: linear-gradient(135deg, #FEB032, #FF702A);
+
+  /*========== Colors ==========*/
+  --yellow-color: #feb032;
+  --orange-color: #ff702a;
+  --red-color: #ff5555;
+  --blue-color: hsl(220, 68%, 54%);
+  --green-color: hsl(158, 98%, 33%);
 
   /*========== Font and typography ==========*/
-  --body-font: "Poppins", sans-serif;
+  --body-font: 'Roboto', sans-serif;
   --biggest-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -32,6 +36,7 @@
   --font-regular: 400;
   --font-medium: 500;
   --font-semi-bold: 600;
+  --font-bold: 700;
   --font-black: 900;
 
   /*========== z index ==========*/
@@ -115,6 +120,11 @@ button {
   overflow: hidden; /*For animation*/
 }
 
+/*========== COLORS ==========*/
+.yellow {
+  background-color: var(--yellow-color);
+}
+
 .center {
   justify-self: center;
 }
@@ -127,8 +137,7 @@ foreignObject {
   display: none;
 }
 
- /*========== GLOBAL CHART OPTIONS ==========*/
- 
+/*========== GLOBAL CHART OPTIONS ==========*/
 
 /*===== MEDIA QUERIES =====*/
 @media screen and (min-width: 768px) {
@@ -143,11 +152,9 @@ foreignObject {
 }
 
 @media screen and (min-width: 1024px) {
- 
 }
 
 @media screen and (min-width: 1120px) {
- 
 }
 
 @media screen and (min-width: 1152px) {

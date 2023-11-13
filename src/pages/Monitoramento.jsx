@@ -1,6 +1,8 @@
 import React from "react";
-import { Swiper, SwiperSlide} from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+
+import Card from "../components/Card/Card";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -17,7 +19,10 @@ const Monitoramento = () => {
             <img src="src/assets/logo-icon-2.svg" />
           </div>
 
-          <h3 className="monitoramento__title">Monitoramento macro regional</h3>
+          <h3 className="monitoramento__title">
+            Monitoramento macro <br />
+            regional
+          </h3>
         </div>
 
         <div className="monitoramento__content">
@@ -25,79 +30,93 @@ const Monitoramento = () => {
             modules={[Pagination]}
             spaceBetween={32}
             slidesPerView={"auto"}
+            loop={true}
+            grabCursor={true}
             centeredSlides={true}
             pagination={{ clickable: true }}
           >
             <SwiperSlide>
-              <article className="monitoramento__card">
-                <div className="monitoramento__number">1</div>
-                <div className="monitoramento__icon">
-                  <i class="ri-registered-line"></i>
-                </div>
-
-                <div className="monitoramento__name">Gerenciamento Urbano</div>
-
-                <p className="gerenciamento__description">
-                  Um dos maiores desafios enfrentados pelas cidades é a busca
-                  por um desenvolvimento sustentável. O gerenciamento urbano
-                  eficaz envolve o planejamento cuidadoso do uso da terra,
-                  infraestrutura, transporte e para seus habitantes.
-                </p>
-              </article>
+              <Card
+                number={"1"}
+                icon={"ri-building-line"}
+                title={"Gerenciamento Urbano"}
+                description={
+                  "Um dos maiores desafios enfrentados pelas cidades é a busca por um desenvolvimento sustentável. O gerenciamento urbano eficaz envolve o planejamento cuidadoso do uso da terra, infraestrutura, transporte e para seus habitantes."
+                }
+                color={"yellow"}
+              />
+            </SwiperSlide>
+      
+            <SwiperSlide>
+                <Card
+                  number={"1"}
+                  icon={"ri-building-line"}
+                  title={"Gerenciamento Urbano"}
+                  description={
+                    "Um dos maiores desafios enfrentados pelas cidades é a busca por um desenvolvimento sustentável. O gerenciamento urbano eficaz envolve o planejamento cuidadoso do uso da terra, infraestrutura, transporte e para seus habitantes."
+                  }
+                  color={"yellow"}
+                />
             </SwiperSlide>
 
             <SwiperSlide>
-              <article className="monitoramento__card">
-                <div className="monitoramento__number">2</div>
-                <div className="monitoramento__icon">
-                  <i class="ri-registered-line"></i>
-                </div>
-
-                <div className="monitoramento__name">Gerenciamento Urbano</div>
-
-                <p className="gerenciamento__description">
-                  Um dos maiores desafios enfrentados pelas cidades é a busca
-                  por um desenvolvimento sustentável. O gerenciamento urbano
-                  eficaz envolve o planejamento cuidadoso do uso da terra,
-                  infraestrutura, transporte e para seus habitantes.
-                </p>
-              </article>
+              <Card
+                  number={"1"}
+                  icon={"ri-building-line"}
+                  title={"Gerenciamento Urbano"}
+                  description={
+                    "Um dos maiores desafios enfrentados pelas cidades é a busca por um desenvolvimento sustentável. O gerenciamento urbano eficaz envolve o planejamento cuidadoso do uso da terra, infraestrutura, transporte e para seus habitantes."
+                  }
+                  color={"yellow"}
+                />
             </SwiperSlide>
 
             <SwiperSlide>
-              <article className="monitoramento__card">
-                <div className="monitoramento__number">3</div>
-                <div className="monitoramento__icon">
-                  <i class="ri-registered-line"></i>
-                </div>
-
-                <div className="monitoramento__name">Gerenciamento Urbano</div>
-
-                <p className="gerenciamento__description">
-                  Um dos maiores desafios enfrentados pelas cidades é a busca
-                  por um desenvolvimento sustentável. O gerenciamento urbano
-                  eficaz envolve o planejamento cuidadoso do uso da terra,
-                  infraestrutura, transporte e para seus habitantes.
-                </p>
-              </article>
+              <Card
+                  number={"1"}
+                  icon={"ri-building-line"}
+                  title={"Gerenciamento Urbano"}
+                  description={
+                    "Um dos maiores desafios enfrentados pelas cidades é a busca por um desenvolvimento sustentável. O gerenciamento urbano eficaz envolve o planejamento cuidadoso do uso da terra, infraestrutura, transporte e para seus habitantes."
+                  }
+                  color={"yellow"}
+                />
             </SwiperSlide>
 
             <SwiperSlide>
-              <article className="monitoramento__card">
-                <div className="monitoramento__number">4</div>
-                <div className="monitoramento__icon">
-                  <i class="ri-registered-line"></i>
-                </div>
+              <Card
+                  number={"1"}
+                  icon={"ri-building-line"}
+                  title={"Gerenciamento Urbano"}
+                  description={
+                    "Um dos maiores desafios enfrentados pelas cidades é a busca por um desenvolvimento sustentável. O gerenciamento urbano eficaz envolve o planejamento cuidadoso do uso da terra, infraestrutura, transporte e para seus habitantes."
+                  }
+                  color={"yellow"}
+                />
+            </SwiperSlide>
 
-                <div className="monitoramento__name">Gerenciamento Urbano</div>
-
-                <p className="gerenciamento__description">
-                  Um dos maiores desafios enfrentados pelas cidades é a busca
-                  por um desenvolvimento sustentável. O gerenciamento urbano
-                  eficaz envolve o planejamento cuidadoso do uso da terra,
-                  infraestrutura, transporte e para seus habitantes.
-                </p>
-              </article>
+            <SwiperSlide>
+              <Card
+                  number={"1"}
+                  icon={"ri-building-line"}
+                  title={"Gerenciamento Urbano"}
+                  description={
+                    "Um dos maiores desafios enfrentados pelas cidades é a busca por um desenvolvimento sustentável. O gerenciamento urbano eficaz envolve o planejamento cuidadoso do uso da terra, infraestrutura, transporte e para seus habitantes."
+                  }
+                  color={"yellow"}
+                />
+            </SwiperSlide>
+            
+            <SwiperSlide>
+              <Card
+                  number={"1"}
+                  icon={"ri-building-line"}
+                  title={"Gerenciamento Urbano"}
+                  description={
+                    "Um dos maiores desafios enfrentados pelas cidades é a busca por um desenvolvimento sustentável. O gerenciamento urbano eficaz envolve o planejamento cuidadoso do uso da terra, infraestrutura, transporte e para seus habitantes."
+                  }
+                  color={"yellow"}
+                />
             </SwiperSlide>
           </Swiper>
         </div>
