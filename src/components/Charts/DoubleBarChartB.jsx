@@ -36,8 +36,8 @@ class DoubleBarChartB extends Component {
       options: {
         chart: {
           type: "bar",
-          height: 200,
-          width: 268,
+          height: "100%",
+          width: "100%",
           fontFamily: "Inter, sans-serif",
           toolbar: {
             show: false,
@@ -49,7 +49,7 @@ class DoubleBarChartB extends Component {
             columnWidth: "70%",
             endingShape: "rounded",
             borderRadiusApplication: "around",
-            borderRadius: 12,
+            borderRadius: 4,
           },
         },
         dataLabels: {
@@ -110,12 +110,18 @@ class DoubleBarChartB extends Component {
 
   render() {
     const infoData = [
-      { name: "Várzea Grande", fillColor: "#FF702A" },
-      { name: "Sinop", fillColor: "#AEDC71" },
+      { name: "Várzea Grande", fillColor: "#FF5555" },
+      { name: "Sinop", fillColor: "#FFDDDD" },
     ];
     return (
       <div className="chart__card">
-        <h3 className="chart__title">Endividamento</h3>
+        <div className="chart__top">
+          <h3 className="chart__title">Endividamento</h3>
+
+          <div className="chart__icon red">
+            <i className="ri-community-line"></i>
+          </div>
+        </div>
         <div className="center">
           <Chart
             options={this.state.options}

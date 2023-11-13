@@ -30,6 +30,7 @@ const Header = ({ OpenSidebar }) => {
     "/state",
     "/monitoramento",
     "/consorcio",
+    "/maps",
   ];
   const isNormalContainer = validEndpointsContainer.includes(path);
 

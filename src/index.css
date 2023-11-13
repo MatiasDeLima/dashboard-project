@@ -19,7 +19,7 @@
   --yellow-color: #feb032;
   --orange-color: #ff702a;
   --red-color: #ff5555;
-  --blue-color: hsl(220, 68%, 54%);
+  --blue-color: #2381FF;
   --green-color: hsl(158, 98%, 33%);
 
   /*========== Font and typography ==========*/
@@ -73,7 +73,6 @@ body {
   padding: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background: var(--body-color);
   color: var(--text-color);
 }
 
@@ -94,6 +93,10 @@ button,
 input {
   border: none;
   outline: none;
+}
+
+input {
+  background: transparent;
 }
 
 button {
@@ -123,6 +126,18 @@ button {
 /*========== COLORS ==========*/
 .yellow {
   background-color: var(--yellow-color);
+}
+
+.blue {
+  background-color: var(--blue-color);
+}
+
+.orange {
+  background-color: var(--orange-color);
+}
+
+.red {
+  background-color: var(--red-color);
 }
 
 .center {

@@ -14,7 +14,6 @@ const ChartPoint = ({ fillColor }) => {
         rx="2"
         ry="2"
         fill={fillColor}
-        stroke-width="2"
       />
     </svg>
   );

@@ -8,12 +8,13 @@ import InvertBarChart from "../components/Charts/InvertBarChart";
 import PercentChartOne from "../components/Charts/PercentChartOne";
 import MapChart from "../components/Charts/MapChart";
 import TriploPercentChart from "../components/Charts/TriploPercentChart";
+import EnsinoChart from "../components/Charts/EnsinoChart/EnsinoChart";
 
 import "../styles/Dashboard.css";
 
 const Dashboard = () => {
   return (
-    <section className="section">
+    <section className="dashboard section">
       <div className="dashboard__container grid">
         <DobleBarChart />
         <ColumnChart />
@@ -25,6 +26,7 @@ const Dashboard = () => {
         <PercentChartOne />
         <MapChart />
         <TriploPercentChart />
+        <EnsinoChart />
       </div>
     </section>
   );

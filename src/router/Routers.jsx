@@ -8,6 +8,7 @@ import State from "../pages/State";
 import SideBar from "../components/SideBar/SideBar";
 import Monitoramento from "../pages/Monitoramento";
 import Consorcio from "../pages/Consorcio";
+import Maps from "../pages/Maps";
 
 import Economia from "../pages/dashboardPages/Economia";
 import GerenUrbano from "../pages/dashboardPages/GerenUrbano";
@@ -32,6 +33,7 @@ const Routers = ({ openSidebarToggle }) => {
       <Route path="/state" element={<State />} />
       <Route path="/monitoramento" element={<Monitoramento />} />
       <Route path="/consorcio" element={<Consorcio />} />
+      <Route path="/maps" element={<Maps />} />
 
       <Route path="/dashboard" element={<WithSideBar openSidebarToggle={openSidebarToggle}><Dashboard /></WithSideBar>} />
       <Route path="/economia" element={<WithSideBar openSidebarToggle={openSidebarToggle}><Economia /></WithSideBar>} />

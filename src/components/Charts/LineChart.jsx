@@ -9,6 +9,18 @@ class LineChart extends Component {
     super(props);
 
     this.state = {
+      series: [
+        {
+          name: "Clicks",
+          data: [6500, 6418, 6456, 6526, 6356, 6456],
+          color: "#2381FF",
+        },
+        {
+          name: "CPC",
+          data: [6456, 6356, 6526, 6332, 6418, 6500],
+          color: "#01AB6C",
+        },
+      ],
       options: {
         chart: {
           height: "100%",
@@ -22,97 +34,65 @@ class LineChart extends Component {
             show: false,
           },
         },
-      },
-      tooltip: {
-        enabled: true,
-        x: {
-          show: false,
+        dataLabels: {
+          enabled: false,
         },
-      },
-      fill: {
-        type: "gradient",
-        gradient: {
-          opacityFrom: 0.55,
-          opacityTo: 0,
-          shade: "#1C64F2",
-          gradientToColors: ["#1C64F2"],
+        stroke: {
+          width: 4,
+          curve: "smooth",
+          lineCap: "butt",
         },
-      },
-      dataLabels: {
-        enabled: false,
-      },
-      stroke: {
-        width: 6,
-        curve: "smooth",
-        lineCap: "butt",
-      },
-      grid: {
-        show: true,
-        strokeDashArray: 4,
-      },
-      series: [
-        {
-          name: "Clicks",
-          data: [6500, 6418, 6456, 6526, 6356, 6456],
-          color: "#2381FF",
-        },
-        {
-          name: "CPC",
-          data: [6456, 6356, 6526, 6332, 6418, 6500],
-          color: "#01AB6C",
-        },
-      ],
-      legend: {
-        show: false,
-      },
-      stroke: {
-        curve: "smooth",
-      },
-      xaxis: {
-        categories: [
-          "01 Feb",
-          "02 Feb",
-          "03 Feb",
-          "04 Feb",
-          "05 Feb",
-          "06 Feb",
-          "07 Feb",
-        ],
-        labels: {
+        grid: {
           show: true,
-          style: {
-            fontFamily: "Inter, sans-serif",
-            cssClass: "text-xs font-normal fill-gray-500 dark:fill-gray-400",
+          strokeDashArray: 4,
+        },
+        xaxis: {
+          categories: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Abr",
+            "Mai",
+            "Jun",
+          ],
+          labels: {
+            show: true,
+            style: {
+              fontFamily: "Inter, sans-serif",
+            },
+          },
+          axisBorder: {
+            show: false,
+          },
+          axisTicks: {
+            show: false,
           },
         },
-        axisBorder: {
-          show: false,
-        },
-        axisTicks: {
-          show: false,
-        },
-      },
-      yaxis: {
-        show: false,
       },
     };
   }
 
   render() {
     const infoData = [
-      { name: "Várzea Grande", fillColor: "#FF702A" },
-      { name: "Sinop", fillColor: "#AEDC71" },
+      { name: "Várzea Grande", fillColor: "#2381FF" },
+      { name: "Sinop", fillColor: "#01AB6C" },
     ];
     return (
       <div className="chart__card">
-        <h3 className="chart__title">Índices econômicos</h3>
+        <div className="chart__top">
+          <h3 className="chart__title">Índices econômicos</h3>
+
+          <div className="chart__icon">
+            <i className="ri-money-dollar-circle-line"></i>
+          </div>
+        </div>
         <div className="center">
           <Chart
             options={this.state.options}
             series={this.state.series}
             type="line"
             width={250}
-            height={200}
+            height={220}
           />
         </div>
 
