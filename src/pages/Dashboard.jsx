@@ -1,6 +1,6 @@
 import ColumnChart from "../components/Charts/ColumnChart";
 import LineChart from "../components/Charts/LineChart";
-import DobleBarChart from "../components/Charts/DobleBarChart";
+import DoubleBarChart from "../components/Charts/DoubleBarChart";
 import PieChart from "../components/Charts/PieChart";
 import DoubleBarChartB from "../components/Charts/DoubleBarChartB";
 import CityChart from "../components/Charts/CityChart";
@@ -16,7 +16,7 @@ const Dashboard = () => {
   return (
     <section className="dashboard section">
       <div className="dashboard__container grid">
-        <DobleBarChart />
+        <DoubleBarChart />
         <ColumnChart />
         <LineChart />
         <PieChart />
